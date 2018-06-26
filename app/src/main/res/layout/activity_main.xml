@@ -6,70 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.ehanoc.menuwheel.view.WheelMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/wheelmenu"
-        android:layout_width="@dimen/wheelmenu_size"
-        android:layout_height="@dimen/wheelmenu_size"
-        app:dividers="3"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/wheelmenu_background_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/wheel_white_bg"
-            android:visibility="visible" />
-
-        <com.ehanoc.menuwheel.view.CircleLayout
-            android:id="@+id/circle_layout_id"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:rotation="0">
-
-
-            <TextView
-                android:text="2"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-            <TextView
-                android:text="0"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-            <TextView
-                android:text="1"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </com.ehanoc.menuwheel.view.CircleLayout>
-
-
-        <include
-        layout="@layout/circle_lense"
-        android:layout_width="@dimen/inner_lense_size"
-        android:layout_height="@dimen/inner_lense_size"
-        app:layout_constraintBottom_toTopOf="@+id/wheelmenu_background_menu"
-        app:layout_constraintEnd_toStartOf="@+id/wheelmenu_background_menu"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/wheelmenu_background_menu"
-        app:layout_constraintTop_toBottomOf="@+id/wheelmenu_background_menu"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="217dp" />
-
-    </com.ehanoc.menuwheel.view.WheelMenuLayout>
+    <include layout="@layout/wheel_menu_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

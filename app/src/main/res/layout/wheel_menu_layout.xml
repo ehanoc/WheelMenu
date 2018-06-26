@@ -5,12 +5,15 @@
     android:id="@+id/wheelmenu"
     android:layout_width="@dimen/wheelmenu_size"
     android:layout_height="@dimen/wheelmenu_size"
-    app:dividers="4">
+    app:dividers="3"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
 
     <ImageView
         android:id="@+id/wheelmenu_background_menu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wheelmenu_size"
+        android:layout_height="@dimen/wheelmenu_size"
+        android:scaleType="fitCenter"
         android:src="@drawable/wheel_white_bg"
         android:visibility="visible" />
 
@@ -19,52 +22,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:rotation="0"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="254dp">
-
-        <ImageView
-            android:layout_width="@dimen/wheel_menu_icon_size"
-            android:layout_height="@dimen/wheel_menu_icon_size"
-            android:background="@android:color/transparent"
-            android:rotation="270"
-            android:src="@mipmap/ic_launcher" />
+        android:rotation="0">
 
 
-        <ImageView
-            android:layout_width="@dimen/wheel_menu_icon_size"
-            android:layout_height="@dimen/wheel_menu_icon_size"
-            android:background="@android:color/transparent"
-            android:rotation="90"
-            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="@dimen/wheel_menu_icon_size"
-            android:layout_height="@dimen/wheel_menu_icon_size"
-            android:background="@android:color/transparent"
-            android:rotation="90"
-            android:src="@mipmap/ic_launcher" />
 
-        <ImageView
-            android:layout_width="@dimen/wheel_menu_icon_size"
-            android:layout_height="@dimen/wheel_menu_icon_size"
-            android:background="@android:color/transparent"
-            android:rotation="90"
-            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
 
     </com.ehanoc.menuwheel.view.CircleLayout>
 
 
-    <!--<include-->
-        <!--layout="@layout/circle_lense"-->
-        <!--android:layout_width="@dimen/inner_lense_size"-->
-        <!--android:layout_height="@dimen/inner_lense_size"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/wheelmenu_background_menu"-->
-        <!--app:layout_constraintEnd_toStartOf="@+id/wheelmenu_background_menu"-->
-        <!--app:layout_constraintHorizontal_bias="0.5"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/wheelmenu_background_menu"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/wheelmenu_background_menu"-->
-        <!--tools:layout_editor_absoluteX="154dp"-->
-        <!--tools:layout_editor_absoluteY="217dp" />-->
+    <include
+        layout="@layout/circle_lense"
+        android:layout_width="@dimen/inner_lense_size"
+        android:layout_height="@dimen/inner_lense_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="51dp" />
 
 </com.ehanoc.menuwheel.view.WheelMenuLayout>
